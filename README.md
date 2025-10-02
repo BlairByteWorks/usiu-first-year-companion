@@ -4,15 +4,17 @@ New Students of USIU Orientation Week
 What and why?
 This static microsite can allow first-time students at USIU to customize orientation by greeting them by name.
 It provides a customized estimate for campus commuting expenses as well as snack expenses (Sironi, Paul's Caffe, etc.
-•	Practical tips such as carpooling and minimizing snack runs
+•	Practical tips such as minimizing snack runs
 •	Day-night theme button for easy visibility under late-night reading situations
 
 Written in vanilla JavaScript (Lesson-1), HTML5, and CSS—no frameworks. This MVP demonstrates fundamentals of JavaScript: prompts, arithmetic, DOM manipulation, string concatenation, and rudimentary styling with `document.body.style`.
 
 Who
-Target User: First-time commuter students of USIU during Orientation Week who need a simplified, customized budgeting instrument that reflects actual expenditures on campus.
+-Target User: 
+First-time commuter students of USIU during Orientation Week who need a simplified, customized budgeting instrument that reflects actual expenditures on campus.
 
 USIU Specific Features
+
 Thika Road Commute Cost Calculator: Computes actual matatu/bus transport costs to campus.
 Snack Costs: References Sironi, Paul’s Caffe on campus, and vendors nearby
 Savings Advice:
@@ -22,7 +24,7 @@ Personalized Output: Prints student name and ID on overview.
 USIU Branding: blue accent complements.
 Running Locally (without Docker)
 1. Clone or download this repository
-2. Open `public/index.html` in a web browser
+2. Open `index.html` in a web browser
 3. Enter your name and Student ID when prompted
 4. Weekly expenses: 
 •	Campus Days (for example, 4)
@@ -34,13 +36,14 @@ Running Locally (without Docker)
 How to Build/Run with Docker
 
 1. Build the Docker image:
-   docker build -t usiu-first-year:v1 .
+    docker build -t blairbytesworks/usiu-first-year-companion .
 
 2. Run the container:
-docker run -p 8080:80 usiu-first-year
+    docker run --rm -p 8080:80 blairbytesworks/usiu-first-year-companion
 
 3.Open in browser:
-   Navigate to `http://localhost:8080
+   Navigate to http://localhost:8080
+
 Calculation of Budget
 Example Student: John Doe (ID: 786453)
 Inputs
@@ -69,8 +72,8 @@ Future improvements:
 
 Deliverables.
 
-Live GitHub Pages URL: 
+Live GitHub Pages URL: https://blairbyteworks.github.io/usiu-first-year-companion/
 
-GitHub Repository Link: 
+GitHub Repository Link: https://github.com/BlairByteWorks/usiu-first-year-companion
 
-Published Docker Image: 
+Published Docker Image: https://hub.docker.com/r/blairbytesworks/usiu-first-year-companion/tags
