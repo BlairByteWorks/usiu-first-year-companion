@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Innovation Challenge - Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Student Innovation Challenge 2025</h1>
+            <p>Join the future of innovation! Register now to showcase your groundbreaking ideas.</p>
+            <div class="form-progress"></div>
+        </div>
+
+        <form id="registrationForm" method="POST" action="#" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required minlength="2" maxlength="50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required minlength="2" maxlength="50">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+254700000000" 
+                               pattern="[+]{1}[0-9]{10,15}" required title="Please enter phone number with country code">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create Account Password <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" required minlength="8" 
+                           placeholder="Minimum 8 characters" title="Password must be at least 8 characters long">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob" name="dob" required max="2010-01-01" min="1980-01-01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="16" max="60" placeholder="25" step="1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Portfolio/Website URL</label>
+                    <input type="url" id="website" name="website" placeholder="https://your-portfolio.com">
+                </div>
+
+                <input type="hidden" name="form_id" value="innovation_challenge_2025">
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferences & Availability</legend>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="preferredWeek">Preferred Week</label>
+                        <input type="week" id="preferredWeek" name="preferredWeek" min="2025-W10" max="2025-W50">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredMonth">Preferred Month</label>
+                        <input type="month" id="preferredMonth" name="preferredMonth" min="2025-03" max="2025-12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="meetingTime">Preferred Meeting Time</label>
+                        <input type="time" id="meetingTime" name="meetingTime" min="09:00" max="18:00" step="1800">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="favColor">Favorite Color (for team assignment)</label>
+                        <input type="color" id="favColor" name="favColor" value="#667eea">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience (0-10)</label>
+                    <input type="range" id="experience" name="experience" min="0" max="10" value="2" step="1">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Technical Skills & Interests</legend>
+                
+                <div class="form-group">
+                    <label for="skills">Primary Skills (hold Ctrl/Cmd to select multiple) <span class="required">*</span></label>
+                    <select id="skills" name="skills" multiple size="6" required>
+                        <option value="ai">Artificial Intelligence & ML</option>
+                        <option value="web">Web Development</option>
+                        <option value="mobile">Mobile App Development</option>
+                        <option value="blockchain">Blockchain Technology</option>
+                        <option value="iot">Internet of Things</option>
+                        <option value="cyber">Cybersecurity</option>
+                        <option value="data">Data Science & Analytics</option>
+                        <option value="ui">UI/UX Design</option>
+                        <option value="cloud">Cloud Computing</option>
+                        <option value="robotics">Robotics & Automation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Participation Type <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="individual" name="participationType" value="individual" required>
+                            <span>Individual</span>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="team" name="participationType" value="team" required>
+                            <span>Team (2-5 members)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Areas of Interest (select all that apply)</label>
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="health" name="interests" value="health">
+                            <span>Healthcare Innovation</span>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="agriculture" name="interests" value="agriculture">
+                            <span>Agriculture Technology</span>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="finance" name="interests" value="finance">
+                            <span>Financial Technology</span>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="education" name="interests" value="education">
+                            <span>Educational Technology</span>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="environment" name="interests" value="environment">
+                            <span>Environmental Solutions</span>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="social" name="interests" value="social">
+                            <span>Social Impact</span>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <div class="form-group">
+                    <label for="resume">Upload Resume/CV (PDF format)</label>
+                    <input type="file" id="resume" name="resume" accept=".pdf" title="Please upload your resume in PDF format">
+                </div>
+
+                <div class="form-group">
+                    <label for="searchKeywords">Search Keywords (for matching with mentors)</label>
+                    <input type="search" id="searchKeywords" name="searchKeywords" 
+                           placeholder="e.g. machine learning, startup, innovation">
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Tell us about yourself and your innovation idea</label>
+                    <textarea id="bio" name="bio" rows="6" maxlength="1000"
+                              placeholder="Describe your background, current projects, and the innovative idea you'd like to work on during the challenge... (Max 1000 characters)"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="button-group">
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
